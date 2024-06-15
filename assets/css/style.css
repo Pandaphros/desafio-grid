@@ -92,10 +92,16 @@ main {
 .product_name {
   margin: 8px;
   font-weight: 700;
+  span {
+  background-color: white;
+}
 }
 .product_price {
   margin: 5px;
   font-weight: 400;
+  span {
+    background-color: white;
+  }
 }
 .product_buy_button {
   display: flex;
