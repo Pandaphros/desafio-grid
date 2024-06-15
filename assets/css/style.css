@@ -1,28 +1,51 @@
 * {
     text-decoration: none;
+    list-style: none;
+    background-color: rgb(229, 229, 229);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .grid-container {
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "menu product product"
-    "menu product product"
-    "menu product product"
-    "footer footer footer";
+    "header header header header header"
+    "menu product product product product"
+    "menu product product product product"
+    "menu product product product product"
+    "menu product product product product"
+    "footer footer footer footer footer";
+    height: 100vh;
+    gap: 5px;
+    grid-template-columns: 225px repeat(4, 1fr);
+    grid-template-rows: 60px repeat(4, 1fr) 60px;
 }
 header {
     grid-area: header;
-    background-color: red;
+    background-color: rgb(15, 15, 128);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
+    color: white;
+  }
+  header p {
+    background-color:rgb(15, 15, 128) ;
   }
   menu {
     grid-area: menu;
-    background-color: blue;
+    background-color: rgb(229, 229, 229);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    grid-row: 2/6;
+  }
+  menu ul {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    row-gap: 2px;
+  }
+  menu span {
+    color: gray;
   }
   main {
     grid-area: product;
@@ -30,12 +53,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row: 2/6;
+    grid-column: 2/6;
   }
   footer {
     grid-area: footer;
-    background-color: green;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    grid-row: 6/7;
+    grid-column: 1/6;
+  }
+  footer p {
+    background-color: white;
   }
