@@ -13,7 +13,6 @@
     "menu product product product product"
     "menu product product product product"
     "footer footer footer footer footer";
-    height: 100vh;
     gap: 5px;
     grid-template-columns: 225px repeat(4, 1fr);
     grid-template-rows: 60px repeat(4, 1fr) 60px;
@@ -34,28 +33,83 @@ header {
     background-color: rgb(229, 229, 229);
     display: flex;
     margin: 0;
-    grid-row: 2/6;
+    grid-row: 2/2;
+    span {
+        color: gray;
+    }
   }
   menu ul {
-    width: 75%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
     row-gap: 2px;
   }
-  menu span {
-    color: gray;
-  }
+
   main {
     grid-area: product;
-    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    grid-row: 2/6;
+    grid-column: 2/6;
+    gap: 10px;
+  }
+  .product_grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product_row_1 {
+    display: flex;
+    gap: 10px;
+
+
+  }
+  .product_row_2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+  }
+  .products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 500px;
+    margin-top: 5px;
+    padding-top: 5px;
+img {
+    width: calc(100% - 150px); /* adjust the value to undersize the image */
+  height: auto;
+  max-width: none; /* ensure the original ratio is maintained */
+  
+}
+  }
+  .product_name {
+    margin: 8px;
+    font-weight: 700;
+  }
+  .product_price {
+    margin: 5px;
+    font-weight: 400;
+  }
+  .product_buy_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-row: 2/6;
-    grid-column: 2/6;
+    width: 100%;
+    min-height: 45px;
+    background-color: rgb(15, 15, 128);
+    span {
+        background-color: rgb(15, 15, 128);
+        color: white;
+    }
+    margin-top: 10px;
   }
+  
   footer {
     grid-area: footer;
     background-color: white;
