@@ -1,0 +1,41 @@
+* {
+    text-decoration: none;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "menu product product"
+    "menu product product"
+    "menu product product"
+    "footer footer footer";
+}
+header {
+    grid-area: header;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  menu {
+    grid-area: menu;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    grid-area: product;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    grid-area: footer;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
